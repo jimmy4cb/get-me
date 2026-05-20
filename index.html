@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakeside Adventure Community</title>
+  <style>
+    :root {
+      --bg: #f4fbff;
+      --primary: #0b5f7c;
+      --accent: #47b3c6;
+      --dark: #102a3a;
+      --light: #ffffff;
+      --muted: #5d7d93;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--dark);
+      background: linear-gradient(180deg, #f4fbff 0%, #eaf4f8 100%);
+      line-height: 1.6;
+    }
+    header {
+      padding: 2rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .hero {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      grid-template-columns: 1fr;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      margin: 0;
+      letter-spacing: -0.05em;
+    }
+    .hero p {
+      max-width: 42rem;
+      margin: 1.5rem 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 1.5rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); background: #0f6d8f; }
+    .cards {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      padding: 1.5rem;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(11,95,124,0.12);
+      box-shadow: 0 20px 50px rgba(15,78,102,0.08);
+    }
+    .card h3 { margin-top: 0; margin-bottom: 0.75rem; }
+    .section {
+      padding: 3rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: clamp(2rem, 3vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+    .grid-2 {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .feature-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.4rem;
+      position: relative;
+      color: var(--muted);
+    }
+    .feature-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .contact {
+      background: linear-gradient(135deg, rgba(7,90,111,0.12), rgba(71,179,198,0.08));
+      border-radius: 32px;
+      padding: 2rem;
+    }
+    .contact p { margin: 0.5rem 0; }
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      color: var(--muted);
+    }
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero { text-align: center; }
+      .hero p { margin-left: auto; margin-right: auto; }
+      .hero .actions { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div>
+        <p style="text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); font-weight: 700; margin-bottom: 1rem;">Lakeside Adventure Community</p>
+        <h1>Explore, connect, and discover Kenya’s wild side with eco-friendly outdoor experiences.</h1>
+        <p>People-powered adventure and wellness in Kisumu and beyond. Join community-led hiking, cycling, camping, nature tours, and cultural journeys across Kenya, Uganda, Rwanda, and Tanzania.</p>
+        <a class="cta" href="#contact">Start your adventure</a>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Community-led tours</h3>
+          <p>Meet local guides and join small group adventures designed to support villages, conserve habitats, and celebrate culture.</p>
+        </div>
+        <div class="card">
+          <h3>Eco-adventure</h3>
+          <p>From scenic hikes and forest trails to bike rides and birdwatching, every trip is planned with nature-first values.</p>
+        </div>
+        <div class="card">
+          <h3>Wellness & connection</h3>
+          <p>Enjoy mindful outdoor experiences that refresh body and mind while building community through shared journeys.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <h2>About us</h2>
+    <div class="grid-2">
+      <div>
+        <p>Lakeside Adventure Community is a people-powered eco-adventure and wellness movement based in Kisumu, Kenya. We bring together hikers, cyclists, campers, and nature lovers for meaningful outdoor experiences that support local families and protect natural habitats.</p>
+      </div>
+      <div>
+        <ul class="feature-list">
+          <li>Guided hikes, cycling tours, and camping trips</li>
+          <li>Community-based eco-tourism with conservation benefits</li>
+          <li>Local culture, wildlife, and scenic lakeside adventures</li>
+          <li>Safe, welcoming experiences for first-time explorers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>What we offer</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Guided Hiking</h3>
+        <p>Explore Kakamega Forest, lakeside trails, and scenic hills with experienced community guides.</p>
+      </div>
+      <div class="card">
+        <h3>Cycling Adventures</h3>
+        <p>Pedal through vibrant countryside, coastal paths, and local villages while staying connected to the environment.</p>
+      </div>
+      <div class="card">
+        <h3>Cultural Tours</h3>
+        <p>Connect with local communities through immersive cultural experiences, storytelling, and food.</p>
+      </div>
+      <div class="card">
+        <h3>Wellness Events</h3>
+        <p>Enjoy group hikes, picnic experiences, and wellness activities designed to refresh and inspire.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact & location</h2>
+    <p><strong>Address:</strong> Nyerere Rd, Kisumu, Kenya</p>
+    <p><strong>Phone:</strong> +254 112 370008</p>
+    <p><strong>Open hours:</strong> Mon–Sun, 8:00 AM – 6:30 PM</p>
+    <p>Follow us on social media for updates, events, and adventure inspiration.</p>
+  </section>
+
+  <footer>
+    <p>Designed for Lakeside Adventure Community — your gateway to eco-friendly outdoor exploration in Kisumu and East Africa.</p>
+  </footer>
+</body>
+</html>
